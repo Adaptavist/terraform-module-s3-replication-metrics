@@ -1,0 +1,42 @@
+image: adaptavist/all-tools:openjdk11-latest-0.14.2
+definitions:
+  tests: &test
+    name: Tests
+    script:
+      - (echo ${PIPELINE_GIT_PRIVATE_KEY} | base64 -d >> ~/.ssh/id_rsa) && chmod 0600 ~/.ssh/id_rsa
+      - terraform fmt -check -recursive -diff
+
+  integration-tests: &integration-tests
+    name: Integration Tests
+    script:
+      - (apk add --update go)
+      - (cd test && AWS_ACCESS_KEY_ID="${TF_TEST_AWS_ACCESS_KEY_ID}" AWS_SECRET_ACCESS_KEY="${TF_TEST_AWS_SECRET_ACCESS_KEY}" LD_SDK_KEY="${LD_SDK_KEY_SANDBOX}" go test -timeout 60m)
+
+  release: &release
+      name: release
+      image: ghcr.io/adaptavist/docker-semantic-release:17.4.2-alpine3.11
+      script:
+        - semantic-release -r ${BITBUCKET_GIT_HTTP_ORIGIN}
+        -
+  transpile: &transpile
+    name: Transpile TS
+    image: node:13
+    caches:
+      - node
+    script:
+      - (cd lambda && npm install && npm ci)
+      - git add lambda/dist/*
+      - git commit --allow-empty -m '[skip ci] transpiled TS to JS'
+      - git push
+
+pipelines:
+  default:
+    - step: *test
+    - step: *transpile
+    - step: *integration-tests
+  branches:
+    master:
+      - step: *test
+      - step: *transpile
+      - step: *integration-tests
+      - step: *release

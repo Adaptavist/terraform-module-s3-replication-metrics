@@ -1,0 +1,11 @@
+{
+  "name": "s3-replication-metric-enabler",
+  "version": "1.0.0",
+  "description": "A lambda which enables replication metrics on a S3 bucket",
+  "main": "app.js",
+  "author": "",
+  "scripts": {
+    "build": ""
+  },
+  "license": "ISC"
+}
