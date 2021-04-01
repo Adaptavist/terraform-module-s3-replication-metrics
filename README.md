@@ -1,29 +1,44 @@
-# README #
+## module-s3-replication-metrics.
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Plugs gap which is Terraform does not currently support enabling S3 replication metrics on a Bucket,
+this is tracked by [this issue](https://github.com/hashicorp/terraform-provider-aws/issues/10974).
+This module uses a Lambda to enable the metrics using the AWS SDK. Before this module is used the buckets should be
+setup and the replication should also be setup.
 
-### What is this repository for? ###
+## Providers
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+| Name | Version |
+|------|---------|
+| aws | n/a |
+| template | n/a |
 
-### How do I get set up? ###
+## Modules
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+| Name | Source | Version |
+|------|--------|---------|
+| aws-lambda | Adaptavist/aws-lambda/module | 1.8.1 |
 
-### Contribution guidelines ###
+## Resources
 
-* Writing tests
-* Code review
-* Other guidelines
+| Name |
+|------|
+| [aws_cloudformation_stack](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudformation_stack) |
+| [aws_iam_policy_document](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) |
+| [aws_iam_role_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy) |
+| [aws_region](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/region) |
+| [aws_s3_bucket](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/s3_bucket) |
+| [template_file](https://registry.terraform.io/providers/hashicorp/template/latest/docs/data-sources/file) |
 
-### Who do I talk to? ###
+## Inputs
 
-* Repo owner or admin
-* Other community or team contact
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| bucket\_name | n/a | `string` | n/a | yes |
+| namespace | n/a | `string` | n/a | yes |
+| regions | n/a | `list(string)` | `[]` | no |
+| stage | n/a | `string` | n/a | yes |
+| tags | n/a | `map(string)` | n/a | yes |
+
+## Outputs
+
+No output.

@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "experimentalDecorators": true,
+    "declaration": true,
+    "importHelpers": true,
+    "module": "commonjs",
+    "outDir": "./dist",
+    "strict": true,
+    "target": "es2017",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "skipLibCheck": true
+  }
+}
