@@ -17,7 +17,7 @@ definitions:
       image: ghcr.io/adaptavist/docker-semantic-release:17.4.2-alpine3.11
       script:
         - semantic-release -r ${BITBUCKET_GIT_HTTP_ORIGIN}
-        -
+
   transpile: &transpile
     name: Transpile TS
     image: node:13
