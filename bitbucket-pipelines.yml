@@ -1,6 +1,6 @@
 image: adaptavist/all-tools:openjdk11-latest-0.14.2
 definitions:
-  tests: &test
+  tests: &tests
     name: Tests
     script:
       - (echo ${PIPELINE_GIT_PRIVATE_KEY} | base64 -d >> ~/.ssh/id_rsa) && chmod 0600 ~/.ssh/id_rsa
@@ -31,12 +31,11 @@ definitions:
 
 pipelines:
   default:
-    - step: *test
+    - step: *tests
     - step: *transpile
     - step: *integration-tests
   branches:
     master:
-      - step: *test
-      - step: *transpile
+      - step: *tests
       - step: *integration-tests
       - step: *release
