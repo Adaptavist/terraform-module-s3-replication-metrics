@@ -1,3 +1,10 @@
+## [1.0.1](http://bitbucket.org/adaptavistlabs/module-s3-replication-metrics/compare/v1.0.0...v1.0.1) (2021-04-29)
+
+
+### Bug Fixes
+
+* no longer setting region in lambda name ([86edbde](http://bitbucket.org/adaptavistlabs/module-s3-replication-metrics/commits/86edbdee376a866d187ddaa0ffe7c3d80d14e32d))
+
 # 1.0.0 (2021-04-28)
 
 
