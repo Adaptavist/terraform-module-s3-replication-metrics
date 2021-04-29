@@ -28,7 +28,7 @@ module "aws-lambda" {
   handler         = "app.handler"
   runtime         = "nodejs12.x"
   timeout         = "300"
-  include_region  = true
+  include_region  = false
 
   namespace = var.namespace
   stage     = var.stage
