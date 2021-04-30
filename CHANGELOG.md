@@ -1,3 +1,10 @@
+## [1.1.2](http://bitbucket.org/adaptavistlabs/module-s3-replication-metrics/compare/v1.1.1...v1.1.2) (2021-04-30)
+
+
+### Bug Fixes
+
+* adding repo key to pipeline ([641304b](http://bitbucket.org/adaptavistlabs/module-s3-replication-metrics/commits/641304b2b386269a2257d40352239ced6c5c6ac7))
+
 ## [1.1.1](http://bitbucket.org/adaptavistlabs/module-s3-replication-metrics/compare/v1.1.0...v1.1.1) (2021-04-30)
 
 
