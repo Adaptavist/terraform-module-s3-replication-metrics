@@ -2,8 +2,7 @@ image: adaptavist/all-tools:openjdk11-latest-0.14.2
 definitions:
   tests: &tests
     name: Tests
-    script:
-      - (echo ${PIPELINE_GIT_PRIVATE_KEY} | base64 -d >> ~/.ssh/id_rsa) && chmod 0600 ~/.ssh/id_rsa
+    script:      
       - terraform fmt -check -recursive -diff
 
   integration-tests: &integration-tests
@@ -16,6 +15,7 @@ definitions:
       name: release
       image: ghcr.io/adaptavist/docker-semantic-release:17.4.2-alpine3.11
       script:
+        - (echo ${PIPELINE_GIT_PRIVATE_KEY} | base64 -d >> ~/.ssh/id_rsa) && chmod 0600 ~/.ssh/id_rsa
         - semantic-release -r ${BITBUCKET_GIT_HTTP_ORIGIN}
 
   transpile: &transpile
