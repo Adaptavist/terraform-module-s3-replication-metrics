@@ -1,3 +1,10 @@
+## [1.1.1](http://bitbucket.org/adaptavistlabs/module-s3-replication-metrics/compare/v1.1.0...v1.1.1) (2021-04-30)
+
+
+### Bug Fixes
+
+* clean up ([b7d4bd9](http://bitbucket.org/adaptavistlabs/module-s3-replication-metrics/commits/b7d4bd962a072fd5785c06c1f958a4daeadfff6f))
+
 # [1.1.0](http://bitbucket.org/adaptavistlabs/module-s3-replication-metrics/compare/v1.0.2...v1.1.0) (2021-04-30)
 
 
