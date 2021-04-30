@@ -1,3 +1,10 @@
+## [1.0.2](http://bitbucket.org/adaptavistlabs/module-s3-replication-metrics/compare/v1.0.1...v1.0.2) (2021-04-30)
+
+
+### Bug Fixes
+
+* hopefully fixing mirror ([ae2400b](http://bitbucket.org/adaptavistlabs/module-s3-replication-metrics/commits/ae2400bcf1eb19bdb65bb1fff6d5960c71d9ed57))
+
 ## [1.0.1](http://bitbucket.org/adaptavistlabs/module-s3-replication-metrics/compare/v1.0.0...v1.0.1) (2021-04-29)
 
 
