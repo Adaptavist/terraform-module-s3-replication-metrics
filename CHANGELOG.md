@@ -1,3 +1,10 @@
+# [1.1.0](http://bitbucket.org/adaptavistlabs/module-s3-replication-metrics/compare/v1.0.2...v1.1.0) (2021-04-30)
+
+
+### Features
+
+* triggering release ([085044a](http://bitbucket.org/adaptavistlabs/module-s3-replication-metrics/commits/085044ab6dc8a3df45d2f7448312428cbc6d6b65))
+
 ## [1.0.2](http://bitbucket.org/adaptavistlabs/module-s3-replication-metrics/compare/v1.0.1...v1.0.2) (2021-04-30)
 
 
