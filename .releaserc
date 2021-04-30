@@ -7,4 +7,3 @@ plugins:
   - "@semantic-release/release-notes-generator"
   - - "@semantic-release/exec"
     - successCmd: git push --mirror git@github.com:Adaptavist/terraform-module-s3-replication-metrics.git
-
