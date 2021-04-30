@@ -1,3 +1,10 @@
+## [1.1.3](http://bitbucket.org/adaptavistlabs/module-s3-replication-metrics/compare/v1.1.2...v1.1.3) (2021-04-30)
+
+
+### Bug Fixes
+
+* removing key as there are no module dependencies ([55881f9](http://bitbucket.org/adaptavistlabs/module-s3-replication-metrics/commits/55881f95fa380f95181a85a8863c5f5f4659ea18))
+
 ## [1.1.2](http://bitbucket.org/adaptavistlabs/module-s3-replication-metrics/compare/v1.1.1...v1.1.2) (2021-04-30)
 
 
